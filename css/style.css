@@ -507,6 +507,12 @@ a:focus {
 	float: left;
 	margin: 0;
 	padding: 0;
+
+	/*
+	Bring form to the side
+	display: flex;
+	justify-content: center;
+	*/
 }
 
 .top_80 {
@@ -542,6 +548,12 @@ a:focus {
 
 .center {
 	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.center_login {
+	width: 60%;
 	display: flex;
 	justify-content: center;
 }
@@ -771,8 +783,8 @@ hr.dottad_border {
 .main_heading::after {
 	content: "";
 	display: block;
-	margin: 20px auto 0;
-	width: 80px;
+	margin: 20px 0;
+	width: 100px;
 	height: 5px;
 	background: #17a5e9;
 }
@@ -981,6 +993,7 @@ header .right_bt .btn {
 .header_top .topbar-left .list-inline {
 	float: left;
 	margin: 13px 0;
+	
 }
 
 .header_top ul li {
@@ -1968,6 +1981,7 @@ section.dottad_star_bg {
 
 .contant_form .form_section {
 	margin-top: 30px;
+	background-color: #146e6f;
 }
 
 .contact_information .information_bottom {
@@ -2187,9 +2201,10 @@ input.field_custom {
 	width: 100%;
 	background: #f8f8f8;
 	min-height: 50px;
+	min-width: 200px;
 	padding: 5px 20px;
 	line-height: normal;
-	border-radius: 0px;
+	border-radius: 15px;
 	margin-bottom: 10px;
 	font-size: 14px;
 	color: #737373;
@@ -2199,7 +2214,7 @@ textarea.field_custom {
 	border: solid #e1e1e1 1px;
 	width: 100%;
 	background: #f8f8f8;
-	min-height: 150px;
+	min-height: 100px;
 	padding: 15px 20px;
 	line-height: normal;
 	border-radius: 0px;
