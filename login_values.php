@@ -1,10 +1,20 @@
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Artec_Computers";
+
+global $user_name;
+global $pwd;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+//DATA FROM LOGIN PAGE
 $user_name=$_POST['user_name'];
 $pwd=$_POST['pwd'];
-$enc_pwd=md5($pwd);
-//connection
-$conn=mysqli_connect("localhost","root","","car_store");
+  //$enc_pwd=md5($pwd);
 
 //check connection
 if($conn->connect_error)
@@ -12,18 +22,21 @@ if($conn->connect_error)
   die("connect failed" . $conn->connect_error);
 }
 
-  $query= "SELECT * FROM USER_LOGIN where user_name='$user_name' AND pwd='enc_pwd'";
+$query= "SELECT * FROM User_Credentials where user_name='$user_name' AND pwd='$pwd'";
   $res_array = mysqli_query($conn,$query);
 
-  if($conn->query($query)==TRUE) 
-  {
-	  echo "success";
-	  header("Location:uregistration.php");
-	  exit();
+  $num = mysqli_num_rows($res_array);
+
+  if($num > 0) {
+    $row = mysqli_fetch_array($res_array);
+    echo "success";
+    header("Location:it_home.html");
+    exit();
   }
-  else 
+  else
   {
-	  echo "failed";
+    header("Location:registration.html");
   }
+
 $conn->close();
 ?>
