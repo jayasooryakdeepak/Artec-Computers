@@ -23,6 +23,7 @@ if($conn->connect_error)
 }
 
 $query= "SELECT * FROM User_Credentials where user_name='$user_name' AND pwd='$pwd'";
+
   $res_array = mysqli_query($conn,$query);
 
   $num = mysqli_num_rows($res_array);
