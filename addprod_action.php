@@ -11,7 +11,7 @@ global $pwd;
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 
-$prodcode = $_POST[ 'pcode' ];
+//$prodcode = $_POST[ 'pcode' ];
 $prodname = $_POST[ 'pname' ];
 $quantity = $_POST['quant'];
 $uprice = $_POST[ 'uprice' ];
@@ -33,8 +33,8 @@ if ( isset( $_POST[ 'submit' ] ) ) {
         {
             echo"<script>alert('Already Exists');window.location='addprod.php';</script>";
         } else {
-            $sql = "insert into Product_Details (productcode,productname,qty,unitprice,sellingprice,description,filename) 
-            values('$prodcode','$prodname','$quantity','$uprice','$sprice','$descp','$target_file')";
+            $sql = "insert into Product_Details (productname,qty,unitprice,sellingprice,description,filename) 
+            values('$prodname','$quantity','$uprice','$sprice','$descp','$target_file')";
             $conn->query($sql);
             echo "<script>alert('success');window.location='addprod.php';</script>";
         }

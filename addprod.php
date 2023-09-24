@@ -16,7 +16,7 @@
     <form action="addprod_action.php" method="POST" enctype="multipart/form-data">
            <center> <h2><u>ADD PRODUCT</h2></u>
         
-      <input type ="text" placeholder="product code" name="pcode" required ><br><br>
+      <input type ="text" placeholder="product code" name="pcode"><br><br>
 
  
     <input type ="text" placeholder="product name" name="pname" required>
