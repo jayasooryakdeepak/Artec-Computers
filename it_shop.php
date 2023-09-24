@@ -106,7 +106,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[3][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[3][1]);?>
                     </a></h4>
                 </div>
@@ -125,7 +125,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[1][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[1][0]); ?>">
                   <?php print_r ($row[1][1]);?>
                     </a></h4>
                 </div>
@@ -144,7 +144,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[1][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -163,7 +163,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -182,7 +182,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -201,7 +201,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -220,7 +220,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -239,7 +239,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -258,7 +258,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -276,7 +276,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -295,7 +295,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
@@ -314,7 +314,7 @@ $row=mysqli_fetch_all($rs);
               <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
                   <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
