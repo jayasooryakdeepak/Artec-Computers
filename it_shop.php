@@ -71,7 +71,31 @@ $(function(){
   </div>
 </div>
 <!-- end inner page banner -->
+
+
+<!--Getting product details from DB -->
 <!-- section -->
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Artec_Computers";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$s="select * from Product_Details";
+
+$rs = mysqli_query($conn,$s);
+                      
+$row=mysqli_fetch_all($rs);
+                  
+                      //For displaying data dynamically
+                      //print_r ($row[2][1]);
+                      //Here [product no][category]
+?>
+
+<!-- section end-->
+
 <div class="section padding_layout_1 product_list_main">
   <div class="container">
     <div class="row">
@@ -79,192 +103,226 @@ $(function(){
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/Ryzen-5-1.jpg" alt=""> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[3][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">Asus Vivobook laptop</a></h4>
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[3][1]);?>
+                    </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs. 60000/-</span> – <span class="new_price">Rs 53000/-</span></p>
+                  <p><span class="old_price">Rs.<?php print_r ($row[3][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[3][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[1][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[1][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[1][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[1][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="product_list">
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_detail_btm">
+                <div class="center">
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
+                </div>
+                <div class="starratin">
+                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                </div>
+                <div class="product_price">
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/rog.jpeg" alt=""> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">Asus ROG Gaming Laptop</a></h4>
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs. 98657</span><span class="new_price"> Rs. 90000/-</span></p>
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
           </div>
+          
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/msi.jpeg" alt=""> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">MSI Gaming Laptop</a></h4>
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs 111111</span><span class="new_price"> Rs. 110000</span></p>
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/4.jpg" alt=""> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
+                  <h4><a href="it_shop_detail.html">
+                  <?php print_r ($row[0][1]);?>
+                    </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/5.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/6.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Kaspersky Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/7.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Mcafee Livesafe Antivirus</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/8.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/1.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/2.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Kaspersky Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/3.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Mcafee Livesafe Antivirus</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-            <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="images/it_service/4.jpg" alt=""> </div>
-              <div class="product_detail_btm">
-                <div class="center">
-                  <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                </div>
-                <div class="starratin">
-                  <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                </div>
-                <div class="product_price">
-                  <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
+                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
