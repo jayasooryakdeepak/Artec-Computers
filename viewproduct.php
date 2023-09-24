@@ -35,7 +35,7 @@ $s="select * from Product_Details";
     <td><?php echo $row['qty'];  ?> </td>
     <td><?php echo $row['unitprice'];  ?> </td>
     <td><?php echo $row['sellingprice'];  ?> </td>
-    <td><img src="<?php echo $row['filename'];  ?>" width="100" height="100"/></td>
+    <td><img src="<?php echo $row['filename'];  ?>" width="400" height="300"/></td>
     <td><?php echo $row['description'];  ?> </td>
   <?php } ?>
   </table>
