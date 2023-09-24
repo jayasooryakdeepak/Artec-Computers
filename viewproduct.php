@@ -4,8 +4,6 @@
   <tr>
     <th>PRODUCT CODE</th>
     <th>PRODUCT NAME</th>
-    <th>CATEGORY</th>
-    <th>MATERIAL</th>
     <th>QUANTITY</th>
     <th>UNIT PRICE</th>
     <th>SELLING PRICE</th>
@@ -17,11 +15,17 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "Artec_Computers";
-$s="select * from product";
-$retval=mysqli_query($this->conn,$str);
-   return $retval;
 
-  $rs=$db -> selectData($s);
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+$s="select * from Product_Details";
+
+//$retval=mysqli_query($conn,$s);
+// return $retval;
+
+  $rs = mysqli_query($conn,$s);
+  
   while($row=mysqli_fetch_array($rs))
   {
     ?>
