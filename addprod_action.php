@@ -27,7 +27,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
 
     if ( move_uploaded_file( $_FILES[ 'file' ][ 'tmp_name' ], $target_file ) ) 
     {
-        $s = "select * from Product_details where productcode='$prodcode' or productname='$prodname'";
+        $s = "select * from Product_details where productname='$prodname'";
         $rt = 2;
         if ( $rt == 1 )
         {

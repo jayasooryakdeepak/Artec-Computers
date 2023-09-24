@@ -103,18 +103,18 @@ $row=mysqli_fetch_all($rs);
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[3][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
-                  <?php print_r ($row[3][1]);?>
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[0][0]); ?>">
+                  <?php print_r ($row[0][1]);?>
                     </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[3][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[3][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[1][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[1][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[1][3]);?></span> – <span class="new_price">₹<?php print_r ($row[1][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -141,18 +141,18 @@ $row=mysqli_fetch_all($rs);
 
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[2][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[1][0]); ?>">
-                  <?php print_r ($row[0][1]);?>
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[2][0]); ?>">
+                  <?php print_r ($row[2][1]);?>
                     </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[2][3]);?></span> – <span class="new_price">₹<?php print_r ($row[2][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -160,18 +160,18 @@ $row=mysqli_fetch_all($rs);
 
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[3][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
                   <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
-                  <?php print_r ($row[0][1]);?>
+                  <?php print_r ($row[3][1]);?>
                     </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[3][3]);?></span> – <span class="new_price">₹<?php print_r ($row[3][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -228,7 +228,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>
@@ -266,7 +266,7 @@ $row=mysqli_fetch_all($rs);
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">Rs.<?php print_r ($row[0][3]);?></span> – <span class="new_price">Rs.<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
                 </div>
               </div>
             </div>

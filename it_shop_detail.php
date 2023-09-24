@@ -114,7 +114,7 @@ $row=mysqli_fetch_all($rs);
             <div class="product-heading">
               <h2><?php print_r ($row[0][1]);?></h2>
             </div>
-            <div class="product-detail-side"> <span><del>Rs.<?php print_r ($row[0][4]);?>/-</del></span><span class="new-price">Rs.<?php print_r ($row[0][3]);?>/-</span> <span class="rating"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </span> <span class="review">(5 customer review)</span> </div>
+            <div class="product-detail-side"> <span><del>₹<?php print_r ($row[0][3]);?>/-</del></span><span class="new-price">₹<?php print_r ($row[0][4]);?>/-</span> <span class="rating"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </span> <span class="review">(5 customer review)</span> </div>
             <div class="detail-contant">
               <p><?php print_r ($row[0][5]);?><br><br>
                 <span class="stock">2 in stock</span> </p>
