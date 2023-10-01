@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['username'])){
+  header("Location:login.html");
+  
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +54,7 @@
 <header id="default_header" class="header_style_1">
 <script>
 $(function(){
-  $("#nav-placeholder").load("widgets/nav_bar.html");
+  $("#nav-placeholder").load("widgets/nav_bar_log.html");
 });
 </script>
 </header>
@@ -82,6 +91,15 @@ $password = "";
 $dbname = "Artec_Computers";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+
+/*
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  echo "Welcome to the member's area, " . htmlspecialchars($_SESSION['username']) . "!";
+} else {
+  echo "Please log in first to see this page.";
+}
+*/
 
 $s="select * from Product_Details";
 
@@ -179,18 +197,18 @@ $row=mysqli_fetch_all($rs);
           
           <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
             <div class="product_list">
-              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[0][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
+              <div class="product_img"> <img class="img-responsive" src="<?php print_r ($row[4][6]);?>" alt="images/it_service/Ryzen-5-1.jpg"> </div>
               <div class="product_detail_btm">
                 <div class="center">
-                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[3][0]); ?>">
-                  <?php print_r ($row[0][1]);?>
+                  <h4><a href="it_shop_detail.php?myid=<?php print_r ($row[4][0]); ?>">
+                  <?php print_r ($row[4][1]);?>
                     </a></h4>
                 </div>
                 <div class="starratin">
                   <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
                 </div>
                 <div class="product_price">
-                  <p><span class="old_price">₹<?php print_r ($row[0][3]);?></span> – <span class="new_price">₹<?php print_r ($row[0][4]);?></span></p>
+                  <p><span class="old_price">₹<?php print_r ($row[4][3]);?></span> – <span class="new_price">₹<?php print_r ($row[4][4]);?></span></p>
                 </div>
               </div>
             </div>

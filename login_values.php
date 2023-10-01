@@ -29,9 +29,11 @@ $query= "SELECT * FROM User_Credentials where user_name='$user_name' AND pwd='$p
   $num = mysqli_num_rows($res_array);
 
   if($num > 0) {
+    $_SESSION['loggedin'] = true;
+    $_SESSION['username'] = $user_name; 
     $row = mysqli_fetch_array($res_array);
     echo "success";
-    header("Location:it_home.html");
+    header("Location:it_shop.php");
     exit();
   }
   else
