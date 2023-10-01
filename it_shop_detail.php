@@ -95,6 +95,33 @@ $row=mysqli_fetch_all($rs);
                       //For displaying data dynamically
                       //print_r ($row[2][1]);
                       //Here [product no][category]
+
+
+//Adding to Cart
+
+if(isset($_POST['add_to_cart'])){
+
+  $user_id = 113;
+  $product_id = $row[0][0];
+  $product_name = $row[0][1];
+  $product_price = $row[0][4];
+  $product_image = $row[0][6];
+
+  $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `Cart` WHERE productname = '$product_name' AND id = '$user_id'") or die('query failed');
+
+  if(mysqli_num_rows($check_cart_numbers) > 0){
+      $message[] = 'already added to cart';
+  }else{
+      mysqli_query($conn, "INSERT INTO `Cart`(
+        id, productcode, productname, price, image) VALUES(
+        '$user_id', '$product_id', '$product_name', '$product_price', '$product_image'
+        )") or die('query failed');
+      
+      $message[] = 'product added to cart';
+  }
+
+}
+
 ?>
 
 <!-- section end-->
@@ -118,13 +145,15 @@ $row=mysqli_fetch_all($rs);
             <div class="detail-contant">
               <p><?php print_r ($row[0][5]);?><br><br>
                 <span class="stock">2 in stock</span> </p>
-              <form class="cart" method="post" action="it_cart.html">
+
+              <form class="cart" method="post" action="">
                 <div class="quantity">
                   <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                 </div>
-                <button type="submit" class="btn sqaure_bt">Add to cart</button>
+                <button type="submit" class="btn sqaure_bt" name="add_to_cart">Add to cart</button>
               </form>
             </div>
+
             <div class="share-post"> <a href="#" class="share-text">Share</a>
               <ul class="social_icons">
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

@@ -16,7 +16,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$id = 113;
 $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
 $phone = $_REQUEST['phone'];
@@ -34,8 +33,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //Inserting into Login Table
-$sql = "INSERT INTO User_Credentials (id, user_name, pwd)
-VALUES ('$id','$user_name', '$passwo')";
+$sql = "INSERT INTO User_Credentials (user_name, pwd)
+VALUES ('$user_name', '$passwo')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record Added";

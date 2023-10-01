@@ -27,14 +27,25 @@ $query= "SELECT * FROM User_Credentials where user_name='$user_name' AND pwd='$p
   $res_array = mysqli_query($conn,$query);
 
   $num = mysqli_num_rows($res_array);
+  $row = mysqli_fetch_assoc($res_array);
 
   if($num > 0) {
-    $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $user_name; 
-    $row = mysqli_fetch_array($res_array);
-    echo "success";
-    header("Location:it_shop.php");
-    exit();
+
+    if($row['user_type'] == 'Admin')
+    {
+      $_SESSION['loggedin'] = true;
+      $_SESSION['username'] = $user_name; 
+      $_SESSION['admin_id'] = $row['id'];
+      $row = mysqli_fetch_array($res_array);
+      header("Location:admin_page.php");
+    }
+    elseif ($row['user_type'] == 'Customer') {
+      $_SESSION['loggedin'] = true;
+      $_SESSION['username'] = $user_name; 
+      $row = mysqli_fetch_array($res_array);
+      header("Location:it_shop.php");
+    }
+    
   }
   else
   {
