@@ -86,6 +86,9 @@ $dbname = "Artec_Computers";
 $conn = new mysqli($servername, $username, $password, $dbname);
 $id = $_GET["myid"];
 
+session_start();
+$user_id = $_SESSION['user_id'];
+
 $s="select * from Product_Details where $id = productcode";
 
 $rs = mysqli_query($conn,$s);
@@ -101,7 +104,6 @@ $row=mysqli_fetch_all($rs);
 
 if(isset($_POST['add_to_cart'])){
 
-  $user_id = 113;
   $product_id = $row[0][0];
   $product_name = $row[0][1];
   $product_price = $row[0][4];
@@ -111,6 +113,12 @@ if(isset($_POST['add_to_cart'])){
 
   if(mysqli_num_rows($check_cart_numbers) > 0){
       $message[] = 'already added to cart';
+      
+      echo '<script type ="text/JavaScript">';  
+      echo 'alert(" already added to cart !!!! ")';  
+      echo '</script>'; 
+      header("Location: it_cart.php");
+
   }else{
       mysqli_query($conn, "INSERT INTO `Cart`(
         id, productcode, productname, price, image) VALUES(
@@ -118,7 +126,12 @@ if(isset($_POST['add_to_cart'])){
         )") or die('query failed');
       
       $message[] = 'product added to cart';
-  }
+
+      echo '<script type ="text/JavaScript">';  
+      echo 'alert("Product Added to cart !!!! ")';  
+      echo '</script>'; 
+      header("Location: it_cart.php");
+    }
 
 }
 

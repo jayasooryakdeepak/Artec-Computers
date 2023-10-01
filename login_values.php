@@ -42,6 +42,7 @@ $query= "SELECT * FROM User_Credentials where user_name='$user_name' AND pwd='$p
     elseif ($row['user_type'] == 'Customer') {
       $_SESSION['loggedin'] = true;
       $_SESSION['username'] = $user_name; 
+      $_SESSION['user_id'] = $row['id'];
       $row = mysqli_fetch_array($res_array);
       header("Location:it_shop.php");
     }
