@@ -213,8 +213,9 @@ $row=mysqli_fetch_all($select_cart);
                 <td class="text-right"><h4>Rs55.00</h4></td>
               </tr>
               <tr>
-                <td><button type="button" class="button">Continue Shopping</button></td>
-                <td><button class="button">Checkout</button></td>
+                <td><a class="btn main_bt" href="it_shop.php">Continue Shopping</a></td>
+                <td><a class="btn main_bt" href="it_checkout.php">Checkout</a></td>
+                
               </tr>
             </tbody>
           </table>

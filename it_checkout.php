@@ -200,7 +200,8 @@
               </form>
             </div>
           </div>
-          <div class="tab-info coupon-section">
+
+          <!-- <div class="tab-info coupon-section">
             <p>Have a coupon? <a href="#cupon" class="" data-toggle="collapse">Click here to enter your code</a></p>
           </div>
           <div id="cupon" class="collapse">
@@ -218,7 +219,7 @@
                 </fieldset>
               </form>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -532,11 +533,11 @@
                   <input name="em" type="email">
                 </div>
               </div>
-              <div class="col-md-6">
+              <!-- <div class="col-md-6">
                 <div class="form-field">
                   <input name="ck" type="checkbox">
                   <span class="crte-ac">Create an account?</span> </div>
-              </div>
+              </div> -->
             </div>
             </fieldset>
           </form>
@@ -562,14 +563,20 @@
                 <td><h3>Total</h3></td>
                 <td class="text-right"><h4>Rs 152.00</h4></td>
               </tr>
+              <tr>
+                <!--Proceed to payment page-->
+                <td><a class="btn main_bt" href="widgets/card/payment.php">Proceed to Payment</a></td>
+              </tr>
             </tbody>
+            
           </table>
         </div>
       </div>
-      <div class="col-sm-12">
+      
+      <!-- <div class="col-sm-12">
         <div class="payment-form">
           <div class="col-xs-12 col-md-12">
-            <!-- CREDIT CARD FORM STARTS HERE -->
+             //CREDIT CARD FORM STARTS HERE
             <div class="panel panel-default credit-card-box">
               <div class="panel-heading display-table">
                 <div class="display-tr">
@@ -621,10 +628,12 @@
                 </form>
               </div>
             </div>
-            <!-- CREDIT CARD FORM ENDS HERE -->
+            //CREDIT CARD FORM ENDS HERE
           </div>
         </div>
-      </div>
+      </div> -->
+
+
     </div>
   </div>
 </div>
