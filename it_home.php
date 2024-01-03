@@ -48,11 +48,33 @@
 
 </div>
 <header id="default_header" class="header_style_1">
-<script>
-$(function(){
-  $("#nav-placeholder").load("widgets/nav_bar.html");
-});
-</script>
+
+<?php
+  session_start();
+
+  if(!isset($_SESSION['username'])){
+    echo '
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("widgets/nav_bar.html");
+    });
+    </script>
+    ';
+  }
+  else
+  {
+    echo '
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("widgets/nav_bar_log.html");
+    });
+    </script>
+    ';
+  }
+?>
+
+
+
 </header>
 <!-- end header -->
 <!-- section -->
