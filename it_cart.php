@@ -51,7 +51,7 @@
 <header id="default_header" class="header_style_1">
 <script>
 $(function(){
-  $("#nav-placeholder").load("widgets/nav_bar.html");
+  $("#nav-placeholder").load("widgets/nav_bar_log.html");
 });
 </script>
 </header>
