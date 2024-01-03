@@ -133,7 +133,7 @@ $row=mysqli_fetch_all($select_cart);
                 <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="email">
                 </td>
                 <td class="col-sm-1 col-md-1 text-center"><p class="price_table"><?php print_r ($row[$l][4]);?></p></td>
-                <td class="col-sm-1 col-md-1 text-center"><p class="price_table">$25.00</p></td>
+                <td class="col-sm-1 col-md-1 text-center"><p class="price_table"><?php print_r ($row[$l][4]);?></p></td>
                 <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
               </tr>
               <?php
@@ -202,15 +202,15 @@ $row=mysqli_fetch_all($select_cart);
               </tr>
               <tr>
                 <td><h4>Subtotal</h4></td>
-                <td class="text-right"><h4>$50.00</h4></td>
+                <td class="text-right"><h4>Rs.50.00</h4></td>
               </tr>
               <tr>
                 <td><h5>Estimated shipping</h5></td>
-                <td class="text-right"><h4>$5.00</h4></td>
+                <td class="text-right"><h4>Rs5.00</h4></td>
               </tr>
               <tr>
                 <td><h3>Total</h3></td>
-                <td class="text-right"><h4>$55.00</h4></td>
+                <td class="text-right"><h4>Rs55.00</h4></td>
               </tr>
               <tr>
                 <td><button type="button" class="button">Continue Shopping</button></td>
