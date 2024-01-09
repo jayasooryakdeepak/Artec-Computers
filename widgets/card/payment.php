@@ -1,10 +1,6 @@
 <?php
-// session_start();
-// include '../connection/dbconnection.php ';
-// $uid = $_SESSION['uid'];
-// $amt = $_REQUEST['amt'];
-// // echo $uid."hello";
-
+session_start();
+$user_id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -183,18 +179,29 @@
           <button type="submit" name="payment" class="card-form__button">Submit</button>
         </form>
         <?php
-        // if (isset($_REQUEST['payment'])) {
-        //   $_SESSION['uid'] = $uid;
-        //   $id = $uid;
-        //   $query = "UPDATE mycart SET cart_status='Paid' WHERE uid='$uid' ";
-        //   $insert = "INSERT INTO payment(uid,amount,payment)VALUES('$uid','$amt','Paid')";
-        //   // $result = mysqli_query($con, $query);
-        //   if ($con->query($query) == TRUE && $con->query($insert) == TRUE) {
-        //     echo "<script>alert('Payment Success'); window.location = 'user_view_book.php';</script>";
-        //   } else {
-        //     echo "<script>alert('Failed'); window.location = 'user_view_book.php';</script>";
-        //   }
-        // }
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "Artec_Computers";
+
+          // Create connection
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          // Check connection
+          if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+          }
+         if (isset($_REQUEST['payment'])) {
+          // $_SESSION['uid'] = $uid;
+          // $id = $uid;
+          $query = "UPDATE Billing_Details SET Payment_Status='Paid' WHERE id='$user_id' ";
+          //$insert = "INSERT INTO payment(uid,amount,payment)VALUES('$uid','$amt','Paid')";
+          // $result = mysqli_query($con, $query);
+          if ($conn->query($query) == TRUE) {
+            echo "<script>alert('Payment Success'); window.location = '../../it_home.php';</script>";
+          } else {
+            echo "<script>alert('Failed'); window.location = '';</script>";
+          }
+       }
         ?>
       </div>
     </div>

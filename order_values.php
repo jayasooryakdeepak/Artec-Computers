@@ -5,6 +5,10 @@
 <body>
 
 <?php
+
+session_start();
+$user_id = $_SESSION['user_id'];
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -26,8 +30,8 @@ $phone = $_REQUEST['ph'];
 $email = $_REQUEST['em'];
 
 //Inserting into Billing_Details Table
-$sql = "INSERT INTO Billing_Details (First_Name, Last_Name, Country, Address, City, Pincode, Phone, Email)
-VALUES ('$fname', '$lname', '$country','$address','$city', '$pincode','$phone' ,'$email')";
+$sql = "INSERT INTO Billing_Details (id, First_Name, Last_Name, Country, Address, City, Pincode, Phone, Email)
+VALUES ('$user_id','$fname', '$lname', '$country','$address','$city', '$pincode','$phone' ,'$email')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record Added";
