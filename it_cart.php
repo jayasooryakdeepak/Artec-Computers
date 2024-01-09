@@ -96,6 +96,7 @@ $user_id = $_SESSION['user_id'];
                       //Here [product no][category]
 
 $grand_total = 0;
+$total = 10;
 $select_cart = mysqli_query($conn, "SELECT * FROM `Cart` WHERE id = '$user_id'") or die('query failed');
 $row=mysqli_fetch_all($select_cart);
 
@@ -121,7 +122,6 @@ $row=mysqli_fetch_all($select_cart);
               $i = mysqli_num_rows($select_cart);
               while ($l < $i)  
                   {
-
 ?>
             <tbody>
               <tr>
@@ -137,7 +137,10 @@ $row=mysqli_fetch_all($select_cart);
                 <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
               </tr>
               <?php
+                $price = $row[$l][4];
+                $grand_total = $grand_total + $price;
                 $l++;
+                
                 }              
               ?>
               <!--
@@ -202,15 +205,15 @@ $row=mysqli_fetch_all($select_cart);
               </tr>
               <tr>
                 <td><h4>Subtotal</h4></td>
-                <td class="text-right"><h4>Rs.50.00</h4></td>
+                <td class="text-right"><h4>₹<?php echo $grand_total;?></h4></td>
               </tr>
               <tr>
                 <td><h5>Estimated shipping</h5></td>
-                <td class="text-right"><h4>Rs5.00</h4></td>
+                <td class="text-right"><h4>₹40.00</h4></td>
               </tr>
               <tr>
                 <td><h3>Total</h3></td>
-                <td class="text-right"><h4>Rs55.00</h4></td>
+                <td class="text-right"><h4>₹<?php echo $grand_total+40;?></h4></td>
               </tr>
               <tr>
                 <td><a class="btn main_bt" href="it_shop.php">Continue Shopping</a></td>
