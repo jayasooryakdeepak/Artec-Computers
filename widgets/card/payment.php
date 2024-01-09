@@ -140,12 +140,12 @@ $user_id = $_SESSION['user_id'];
           <label for="cardNumber" class="card-input__label">Card Number</label>
           <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask"
             v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber"
-            autocomplete="off" />
+            autocomplete="off" required/>
         </div>
         <div class="card-input">
           <label for="cardName" class="card-input__label">Card Holders Name</label>
           <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput"
-            v-on:blur="blurInput" data-ref="cardName" autocomplete="off" />
+            v-on:blur="blurInput" data-ref="cardName" autocomplete="off" required/>
         </div>
         <div class="card-form__row">
           <div class="card-form__col">
@@ -171,7 +171,7 @@ $user_id = $_SESSION['user_id'];
             <div class="card-input">
               <label for="cardCvv" class="card-input__label">CVV</label>
               <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="3" v-model="cardCvv"
-                v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off" />
+                v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off" required/>
             </div>
           </div>
         </div>
