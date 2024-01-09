@@ -226,7 +226,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="checkout-form">
-          <form action="#">
+          <form action="order_values.php">
             <fieldset>
             <div class="row">
               <div class="col-md-6">
@@ -511,12 +511,6 @@
               </div>
               <div class="col-md-12">
                 <div class="form-field">
-                  <label>State<span class="red">*</span></label>
-                  <input name="sc" type="text">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-field">
                   <label>Pincode <span class="red">*</span></label>
                   <input name="pz" type="text">
                 </div>
@@ -533,6 +527,7 @@
                   <input name="em" type="email">
                 </div>
               </div>
+              <button class="btn main_bt">SUBMIT NOW</button>
               <!-- <div class="col-md-6">
                 <div class="form-field">
                   <input name="ck" type="checkbox">
