@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>Artec Computers</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -108,7 +108,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#"></div>
                 <h4 class="service-heading">Fast service</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si2.png" alt="#"></div>
                 <h4 class="service-heading">Secure payments</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si3.png" alt="#"></div>
                 <h4 class="service-heading">Expert team</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si4.png" alt="#"></div>
                 <h4 class="service-heading">Affordable services</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si5.png" alt="#"></div>
                 <h4 class="service-heading">90 Days warranty</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ session_start();
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si6.png" alt="#"></div>
                 <h4 class="service-heading">Award winning</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -171,8 +171,8 @@ session_start();
           <div class="service_img"> <img class="img-responsive" src="images/it_service/post-01.jpg" alt="#" /> </div>
           <div class="service_cont">
             <h3 class="service_head">Data recovery</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+            <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> -->
+            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.php">View Service</a> </div>
           </div>
         </div>
       </div>
@@ -181,8 +181,8 @@ session_start();
           <div class="service_img"> <img class="img-responsive" src="images/it_service/post-02.jpg" alt="#" /> </div>
           <div class="service_cont">
             <h3 class="service_head">Computer repair</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+            <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> -->
+            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.php">View Service</a> </div>
           </div>
         </div>
       </div>
@@ -191,8 +191,8 @@ session_start();
           <div class="service_img"> <img class="img-responsive" src="images/it_service/post-03.jpg" alt="#" /> </div>
           <div class="service_cont">
             <h3 class="service_head">Network solutions</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+            <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> -->
+            <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.php">View Service</a> </div>
           </div>
         </div>
       </div>

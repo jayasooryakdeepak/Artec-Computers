@@ -159,7 +159,7 @@
                               data-splitin="none" 
                               data-splitout="none" 
                               data-responsive_offset="on" 
-                              style="z-index: 7; white-space: nowrap;">Available On It.Next </div>
+                              style="z-index: 7; white-space: nowrap;">Available On Artec Computers </div>
             </li>
             <li data-index="rs-181" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Easy To Use & Customize" data-description="">
               <!-- MAIN IMAGE -->
@@ -235,7 +235,7 @@
                               data-splitin="none" 
                               data-splitout="none" 
                               data-responsive_offset="on" 
-                              style="z-index: 7; white-space: nowrap;">Available On It.Next </div>
+                              style="z-index: 7; white-space: nowrap;">Available On Artec Computers </div>
             </li>
             <li data-index="rs-18" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/slide3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Perfectly Responsive" data-description="">
               <!-- MAIN IMAGE -->
@@ -311,7 +311,7 @@
                               data-splitin="none" 
                               data-splitout="none" 
                               data-responsive_offset="on" 
-                              style="z-index: 7; white-space: nowrap;">Available On It.Next </div>
+                              style="z-index: 7; white-space: nowrap;">Available On Artec Computers </div>
             </li>
           </ul>
           <div class="tp-static-layers"></div>
@@ -341,7 +341,6 @@
             <div class="icon"> <img src="images/it_service/i1.png" alt="#" /> </div>
           </div>
           <h4 class="theme_color">Data recovery</h4>
-          <p>Perspiciatis eos quos totam cum minima aut!</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -350,7 +349,6 @@
             <div class="icon"> <img src="images/it_service/i2.png" alt="#" /> </div>
           </div>
           <h4 class="theme_color">Computer repair</h4>
-          <p>Perspiciatis eos quos totam cum minima aut!</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -359,7 +357,7 @@
             <div class="icon"> <img src="images/it_service/i3.png" alt="#" /> </div>
           </div>
           <h4 class="theme_color">Mobile service</h4>
-          <p>Perspiciatis eos quos totam cum minima aut!</p>
+          <p></p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -368,7 +366,6 @@
             <div class="icon"> <img src="images/it_service/i4.png" alt="#" /> </div>
           </div>
           <h4 class="theme_color">Network solutions</h4>
-          <p>Perspiciatis eos quos totam cum minima aut!</p>
         </div>
       </div>
     </div>
@@ -434,8 +431,7 @@
       <div class="col-md-4">
         <div class="full" style="margin-top: 35px;">
           <h3>Need file recovery?</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et 
-            quasi architecto beatae vitae dicta sunt explicabo.. </p>
+          <p>Data recovery is a process of retrieving deleted, inaccessible, lost, corrupted, damaged, or formatted data from secondary storage</p>
           <p><a class="btn main_bt" href="#">Read More</a></p>
         </div>
       </div>
@@ -464,7 +460,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#" /></div>
                 <h4 class="service-heading">Fast service</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -473,7 +469,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si2.png" alt="#" /></div>
                 <h4 class="service-heading">Secure payments</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -482,7 +478,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si3.png" alt="#" /></div>
                 <h4 class="service-heading">Expert team</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -491,7 +487,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si4.png" alt="#" /></div>
                 <h4 class="service-heading">Affordable services</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -500,7 +496,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si5.png" alt="#" /></div>
                 <h4 class="service-heading">90 Days warranty</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>
@@ -509,7 +505,7 @@
               <div class="service_blog_inner">
                 <div class="icon text_align_left"><img src="images/it_service/si6.png" alt="#" /></div>
                 <h4 class="service-heading">Award winning</h4>
-                <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                <!-- <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p> -->
               </div>
             </div>
           </div>

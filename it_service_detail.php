@@ -37,112 +37,31 @@
 <!-- end loader -->
 <!-- header -->
 <header id="default_header" class="header_style_1">
-  <!-- header top -->
-  <div class="header_top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="full">
-            <div class="topbar-left">
-              <ul class="list-inline">
-                <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">540 Lorem Ipsum New York, AB 90218</span> </li>
-                <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></span> </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 right_section_header_top">
-          <div class="float-left">
-            <div class="social_icon">
-              <ul class="list-inline">
-                <li><a class="fa fa-facebook" href="https://www.facebook.com/" title="Facebook" target="_blank"></a></li>
-                <li><a class="fa fa-google-plus" href="https://plus.google.com/" title="Google+" target="_blank"></a></li>
-                <li><a class="fa fa-twitter" href="https://twitter.com" title="Twitter" target="_blank"></a></li>
-                <li><a class="fa fa-linkedin" href="https://www.linkedin.com" title="LinkedIn" target="_blank"></a></li>
-                <li><a class="fa fa-instagram" href="https://www.instagram.com" title="Instagram" target="_blank"></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="float-right">
-            <div class="make_appo"> <a class="btn white_btn" href="make_appointment.html">Make Appointment</a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end header top -->
-  <!-- header bottom -->
-  <div class="header_bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-          <!-- logo start -->
-          <div class="logo"> <a href="it_home.html"><img src="images/logos/it_logo.png" alt="logo" /></a> </div>
-          <!-- logo end -->
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-          <!-- menu start -->
-          <div class="menu_side">
-            <div id="navbar_menu">
-              <ul class="first-ul">
-                <li> <a href="it_home.html">Home</a>
-                  <ul>
-                    <li><a href="it_home.html">It Home Page</a></li>
-                    <li><a href="it_home_dark.html">It Dark Home Page</a></li>
-                  </ul>
-                </li>
-                <li><a href="it_about.html">About Us</a></li>
-                <li> <a class="active" href="it_service.html">Service</a>
-                  <ul>
-                    <li><a href="it_service_list.html">Services list</a></li>
-                    <li><a href="it_service_detail.html">Services Detail</a></li>
-                  </ul>
-                </li>
-                <li> <a href="it_blog.html">Blog</a>
-                  <ul>
-                    <li><a href="it_blog.html">Blog List</a></li>
-                    <li><a href="it_blog_grid.html">Blog Grid</a></li>
-                    <li><a href="it_blog_detail.html">Blog Detail</a></li>
-                  </ul>
-                </li>
-                <li> <a href="#">Pages</a>
-                  <ul>
-                    <li><a href="it_career.html">Career</a></li>
-                    <li><a href="it_price.html">Pricing</a></li>
-                    <li><a href="it_faq.html">Faq</a></li>
-                    <li><a href="it_privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="it_error.html">Error 404</a></li>
-                  </ul>
-                </li>
-                <li> <a href="it_shop.html">Shop</a>
-                  <ul>
-                    <li><a href="it_shop.html">Shop List</a></li>
-                    <li><a href="it_shop_detail.html">Shop Detail</a></li>
-                    <li><a href="it_cart.html">Shopping Cart</a></li>
-                    <li><a href="it_checkout.html">Checkout</a></li>
-                  </ul>
-                </li>
-                <li> <a href="it_contact.html">Contact</a>
-                  <ul>
-                    <li><a href="it_contact.html">Contact Page 1</a></li>
-                    <li><a href="it_contact_2.html">Contact Page 2</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- menu end -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- header bottom end -->
+
 </header>
+<?php
+if(!isset($_SESSION['username'])){
+  @include 'widgets/nav_bar.html';
+  // echo '
+  // <script>
+  // $(function(){
+  //   $("#nav-placeholder").load("widgets/nav_bar.html");
+  // });
+  // </script>
+  // ';
+}
+else
+{
+  @include 'widgets/nav_bar_log.html';
+  // echo '
+  // <script>
+  // $(function(){
+  //   $("#nav-placeholder").load("widgets/nav_bar_log.html");
+  // });
+  // </script>
+  // ';
+}
+?>
 <!-- end header -->
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
@@ -176,15 +95,14 @@
               <div class="service_img"> <img class="img-responsive" src="images/it_service/post-02.jpg" alt="#" /> </div>
               <div class="service_cont">
                 <h3 class="service_head">Data recovery</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-                  passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
-                  <br>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.html">Book Service</a> </div>
+                <p>In computing, data recovery is a process of retrieving deleted, inaccessible, lost, corrupted, damaged, or formatted data from secondary storage, 
+                  removable media or files, when the data stored in them cannot be accessed in a usual way.<br>The data is most often salvaged from storage media such as 
+                  internal or external hard disk drives (HDDs), solid-state drives (SSDs), USB flash drives, magnetic tapes, CDs, DVDs, RAID subsystems,
+                   and other electronic devices. Recovery may be required due to physical damage to the storage devices or logical damage to the file system that 
+                   prevents it from being mounted by the host operating system (OS)<br>
+                  
+                  </p>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.php">Book Service</a> </div>
               </div>
             </div>
           </div>
@@ -194,7 +112,7 @@
               <div class="service_cont">
                 <h3 class="service_head">Network solutions</h3>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.html">Book Service</a> </div>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.php">Book Service</a> </div>
               </div>
             </div>
           </div>
@@ -204,7 +122,7 @@
               <div class="service_cont">
                 <h3 class="service_head">Data recovery</h3>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.html">Book Service</a> </div>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="make_appointment.php">Book Service</a> </div>
               </div>
             </div>
           </div>
