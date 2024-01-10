@@ -73,7 +73,7 @@ if(isset($_GET['delete'])){
          <p> Email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> Item_name : <span><?php echo $fetch_orders['item_name']; ?></span> </p>
-         <p> Complaint Description : <span><?php echo $fetch_orders['complaint_description']; ?>/-</span> </p>
+         <p> Complaint Description : <span><?php echo $fetch_orders['complaint_description']; ?></span> </p>
           <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['S_id']; ?>">
             <select name="update_status">
