@@ -84,7 +84,7 @@ if(!isset($admin_id)){
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>products added</p>
+         <p>Products added</p>
       </div>
 
       <div class="box">
@@ -98,28 +98,25 @@ if(!isset($admin_id)){
 
       <div class="box">
          <?php
-            $select_products = mysqli_query($conn, "SELECT * FROM `Product_Details`") or die('query failed');
+            $select_products = mysqli_query($conn, "SELECT * FROM `Service_Details` WHERE Status = 'Pending'") or die('query failed');
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>Service Requests</p>
+         <p>Service Requests Pending</p>
+      </div>
+
+      <div class="box">
+         <?php
+            $select_products = mysqli_query($conn, "SELECT * FROM `Service_Details` WHERE Status = 'Completed'") or die('query failed');
+            $number_of_products = mysqli_num_rows($select_products);
+         ?>
+         <h3><?php echo $number_of_products; ?></h3>
+         <p>Service Requests Completed</p>
       </div>
 
    </div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="js/admin_script.js"></script>
 
