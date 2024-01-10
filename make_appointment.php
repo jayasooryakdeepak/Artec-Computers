@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['username'])){
+  header("Location:login.html");
+  
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +44,8 @@
 </head>
 <body id="default_theme" class="make_appointment">
 <!-- loader -->
-<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+<!-- 
+<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div> -->
 <!-- end loader -->
 <!-- header -->
 <header id="default_header" class="header_style_1">
@@ -168,6 +177,8 @@
   </div>
 </div>
 <!-- end inner page banner -->
+
+
 <div class="section padding_layout_1">
   <div class="container">
     <div class="row">
@@ -182,26 +193,33 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form">
               <div class="form_section">
-                <form class="form_contant" action="index.html">
+                <form class="form_contant" action="service_values.php">
                   <fieldset class="row">
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Name" type="text" required>
+                    <input class="field_custom" name="fname" placeholder="First Name" type="text" required>
                     <br>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Last Name" type="text" required>
+                    <input class="field_custom" name="lname" placeholder="Last Name" type="text" required>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Your Email" type="email" required>
+                    <input class="field_custom" name="email"placeholder="Your Email" type="email" required>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Your Phone Number" type="text" required>
+                    <input class="field_custom" name="phn"placeholder="Your Phone Number" type="text" required>
                   </div>
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Subject" type="text" required>
+                    <input class="field_custom" name="adr"placeholder="Address" type="text" required>
                   </div>
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <textarea class="field_custom" placeholder="Description" required></textarea>
+                    <input class="field_custom" name="lndmrk"placeholder="Landmark" type="text" required>
+                  </div>
+                  <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input class="field_custom" name="iname" placeholder="Item Name" type="text" required>
+                  </div>
+                  
+                  <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <textarea class="field_custom" name="desc" placeholder="Complaint Description" required></textarea>
                   </div>
                   <div class="center">
                     <button class="btn main_bt">SUBMIT NOW</button>
@@ -216,6 +234,39 @@
     </div>
   </div>
 </div>
+
+<?php
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "Artec_Computers";
+
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $dbname);
+// // Check connection
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
+// $user_id = $_SESSION['user_id'];
+// $fname = $_REQUEST['fname'];
+// $lname = $_REQUEST['lname'];
+// $email = $_REQUEST['email'];
+// $phn = $_REQUEST['phn'];
+// $adr = $_REQUEST['adr'];
+// $lndmrk = $_REQUEST['lndmrk'];
+// $iname = $_REQUEST['iname'];
+// $desc = $_REQUEST['desc'];
+
+// //Inserting into Service_Details Table
+// $sql = "INSERT INTO Service_Details (id,First_Name, Last_Name, email, phone, address, landmark, item_name, complaint_description)
+// VALUES ('$user_id', '$fname', '$lname','$email','$phn', '$adr','$lndmrk','$iname','$desc')";
+
+// if ($conn->query($sql) === TRUE) {
+//   echo "Record Added";
+// } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+?>
 <!-- section -->
 <div class="section padding_layout_1 testmonial_section white_fonts">
   <div class="container">
