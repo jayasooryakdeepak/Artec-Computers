@@ -450,6 +450,7 @@
                   <input name="em" type="email">
                 </div>
               </div>
+              <input type="hidden" name="total" value="<?php echo $grand_total; ?>">
               <!-- <button class="btn main_bt">SUBMIT NOW</button> -->
 
               <!-- <div class="col-md-6">

@@ -41,7 +41,7 @@
 </head>
 <body id="default_theme" class="it_serv_shopping_cart shopping-cart">
 <!-- loader -->
-<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+<!-- <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div> -->
 <!-- end loader -->
 <!-- header -->
 <!--Navigation bar-->
