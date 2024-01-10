@@ -48,39 +48,39 @@ if(!isset($admin_id)){
       <div class="box">
          <?php
             $total_pendings = 0;
-            $select_pendings = mysqli_query($Con, "SELECT * FROM `orders` WHERE payment_status = 'pending'") or die('query failed');
+            $select_pendings = mysqli_query($conn, "SELECT * FROM `Billing_Details` WHERE Payment_Status = 'Pending'") or die('query failed');
             while($fetch_pendings = mysqli_fetch_assoc($select_pendings)){
-               $total_pendings += $fetch_pendings['total_price'];
+               $total_pendings += $fetch_pendings['Amount'];
             };
          ?>
-         <h3>$<?php echo $total_pendings; ?>/-</h3>
-         <p>total pendings</p>
+         <h3>₹<?php echo $total_pendings; ?>/-</h3>
+         <p>Total Pendings</p>
       </div>
 
       <div class="box">
          <?php
             $total_completes = 0;
-            $select_completes = mysqli_query($Con, "SELECT * FROM `orders` WHERE payment_status = 'completed'") or die('query failed');
+            $select_completes = mysqli_query($conn, "SELECT * FROM `Billing_Details` WHERE Payment_Status = 'Paid'")  or die('query failed');
             while($fetch_completes = mysqli_fetch_assoc($select_completes)){
-               $total_completes += $fetch_completes['total_price'];
+               $total_completes += $fetch_completes['Amount'];
             };
          ?>
-         <h3>$<?php echo $total_completes; ?>/-</h3>
-         <p>completed paymets</p>
+         <h3>₹<?php echo $total_completes; ?>/-</h3>
+         <p>Completed Payments</p>
       </div>
 
       <div class="box">
          <?php
-            $select_orders = mysqli_query($Con, "SELECT * FROM `orders`") or die('query failed');
+            $select_orders = mysqli_query($conn, "SELECT * FROM `Billing_Details`") or die('query failed');
             $number_of_orders = mysqli_num_rows($select_orders);
          ?>
          <h3><?php echo $number_of_orders; ?></h3>
-         <p>orders placed</p>
+         <p>Orders Placed</p>
       </div>
 
       <div class="box">
          <?php
-            $select_products = mysqli_query($Con, "SELECT * FROM `products`") or die('query failed');
+            $select_products = mysqli_query($conn, "SELECT * FROM `Product_Details`") or die('query failed');
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
@@ -89,38 +89,20 @@ if(!isset($admin_id)){
 
       <div class="box">
          <?php
-            $select_users = mysqli_query($Con, "SELECT * FROM `users` WHERE user_type = 'user'") or die('query failed');
-            $number_of_users = mysqli_num_rows($select_users);
-         ?>
-         <h3><?php echo $number_of_users; ?></h3>
-         <p>normal users</p>
-      </div>
-
-      <div class="box">
-         <?php
-            $select_admin = mysqli_query($Con, "SELECT * FROM `users` WHERE user_type = 'admin'") or die('query failed');
-            $number_of_admin = mysqli_num_rows($select_admin);
-         ?>
-         <h3><?php echo $number_of_admin; ?></h3>
-         <p>admin users</p>
-      </div>
-
-      <div class="box">
-         <?php
-            $select_account = mysqli_query($Con, "SELECT * FROM `users`") or die('query failed');
+            $select_account = mysqli_query($conn, "SELECT * FROM `User_Credentials`") or die('query failed');
             $number_of_account = mysqli_num_rows($select_account);
          ?>
          <h3><?php echo $number_of_account; ?></h3>
-         <p>total accounts</p>
+         <p>Total Users</p>
       </div>
 
       <div class="box">
          <?php
-            $select_messages = mysqli_query($Con, "SELECT * FROM `message`") or die('query failed');
-            $number_of_messages = mysqli_num_rows($select_messages);
+            $select_products = mysqli_query($conn, "SELECT * FROM `Product_Details`") or die('query failed');
+            $number_of_products = mysqli_num_rows($select_products);
          ?>
-         <h3><?php echo $number_of_messages; ?></h3>
-         <p>new messages</p>
+         <h3><?php echo $number_of_products; ?></h3>
+         <p>Service Requests</p>
       </div>
 
    </div>

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --purple:#8e44ad;
+   --purple:#126da6;
+   --blue:#126da6;
    --red:#c0392b;
    --orange:#f39c12;
    --black:#333;
@@ -168,7 +169,7 @@ section{
 }
 
 .header .flex .logo span{
-   color:var(--purple);
+   color:var(--blue);
 }
 
 .header .flex .navbar a{
