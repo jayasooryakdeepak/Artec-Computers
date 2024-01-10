@@ -23,7 +23,7 @@ if(isset($_POST['update_order'])){
     $S_id = $_POST['order_id'];
     $update_status = $_POST['update_status'];
     mysqli_query($conn, "UPDATE `Service_Details` SET Status = '$update_status' WHERE S_id = '$S_id'") or die('query failed');
-    $message[] = 'payment status has been updated!';
+   //  $message[] = 'payment status has been updated!';
 }
 
 if(isset($_GET['delete'])){
