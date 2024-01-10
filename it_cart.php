@@ -96,7 +96,8 @@ $user_id = $_SESSION['user_id'];
                       //Here [product no][category]
 
 $grand_total = 0;
-$total = 10;
+$total = 0;
+$price = 0;
 $select_cart = mysqli_query($conn, "SELECT * FROM `Cart` WHERE id = '$user_id'") or die('query failed');
 $row=mysqli_fetch_all($select_cart);
 
@@ -138,10 +139,14 @@ $row=mysqli_fetch_all($select_cart);
               </tr>
               <?php
                 $price = $row[$l][4];
-                $grand_total = $grand_total + $price;
+                $total = $total + $price;
+                $grand_total = $total + 40;
+                
+
                 $l++;
                 
                 }              
+                $_SESSION['grand'] = $grand_total;
               ?>
               <!--
               <tr>
@@ -205,7 +210,7 @@ $row=mysqli_fetch_all($select_cart);
               </tr>
               <tr>
                 <td><h4>Subtotal</h4></td>
-                <td class="text-right"><h4>₹<?php echo $grand_total;?></h4></td>
+                <td class="text-right"><h4>₹<?php echo $total;?></h4></td>
               </tr>
               <tr>
                 <td><h5>Estimated shipping</h5></td>
@@ -213,7 +218,7 @@ $row=mysqli_fetch_all($select_cart);
               </tr>
               <tr>
                 <td><h3>Total</h3></td>
-                <td class="text-right"><h4>₹<?php echo $grand_total+40;?></h4></td>
+                <td class="text-right"><h4>₹<?php echo $grand_total;?></h4></td>
               </tr>
               <tr>
                 <td><a class="btn main_bt" href="it_shop.php">Continue Shopping</a></td>

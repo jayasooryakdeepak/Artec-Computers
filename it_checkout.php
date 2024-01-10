@@ -1,6 +1,7 @@
 <?php
   session_start();
   $user_id = $_SESSION['user_id'];
+  $grand_total = $_SESSION['grand'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -230,7 +231,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="checkout-form">
-          <form action="order_values.php">
+          <form action="order_values.php" id="checkout">
             <fieldset>
             <div class="row">
               <div class="col-md-6">
@@ -531,7 +532,8 @@
                   <input name="em" type="email">
                 </div>
               </div>
-              <button class="btn main_bt">SUBMIT NOW</button>
+              <!-- <button class="btn main_bt">SUBMIT NOW</button> -->
+
               <!-- <div class="col-md-6">
                 <div class="form-field">
                   <input name="ck" type="checkbox">
@@ -551,20 +553,13 @@
                 <td class="text-right"></td>
               </tr>
               <tr>
-                <td><h4>Subtotal</h4></td>
-                <td class="text-right"><h4>Rs 112.00</h4></td>
-              </tr>
-              <tr>
-                <td><h5>Estimated shipping</h5></td>
-                <td class="text-right"><h4>Rs 40.00</h4></td>
-              </tr>
-              <tr>
-                <td><h3>Total</h3></td>
-                <td class="text-right"><h4>Rs 152.00</h4></td>
+                <td><h4>Total Amount</h4></td>
+                <td class="text-right"><h4>₹<?php echo $grand_total;?></h4></td>
               </tr>
               <tr>
                 <!--Proceed to payment page-->
-                <td><a class="btn main_bt" href="widgets/card/payment.php">Proceed to Payment</a></td>
+                <td><button class="btn main_bt" form ="checkout" type="submit">SUBMIT NOW</button></td>
+                <!-- <td><a class="btn main_bt" href="widgets/card/payment.php">Proceed to Payment</a></td> -->
               </tr>
             </tbody>
             
@@ -631,8 +626,6 @@
           </div>
         </div>
       </div> -->
-
-
     </div>
   </div>
 </div>

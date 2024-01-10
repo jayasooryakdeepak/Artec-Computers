@@ -140,7 +140,7 @@ $user_id = $_SESSION['user_id'];
           <label for="cardNumber" class="card-input__label">Card Number</label>
           <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask"
             v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber"
-            autocomplete="off" required/>
+            autocomplete="off"/>
         </div>
         <div class="card-input">
           <label for="cardName" class="card-input__label">Card Holders Name</label>
