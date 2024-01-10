@@ -31,12 +31,12 @@ if ( isset( $_POST[ 'submit' ] ) ) {
         $rt = 2;
         if ( $rt == 1 )
         {
-            echo"<script>alert('Already Exists');window.location='addprod.php';</script>";
+            echo"<script>alert('Already Exists');window.location='admin_products.php';</script>";
         } else {
             $sql = "insert into Product_Details (productname,qty,unitprice,sellingprice,description,filename) 
             values('$prodname','$quantity','$uprice','$sprice','$descp','$target_file')";
             $conn->query($sql);
-            echo "<script>alert('success');window.location='addprod.php';</script>";
+            echo "<script>alert('Product Added Successfully');window.location='admin_products.php';</script>";
         }
     } else {
         //echo "<script>alert('Sorry, there was an error uploading your file.');window.location='addprod.php';</script>";
