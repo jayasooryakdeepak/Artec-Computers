@@ -131,7 +131,7 @@ $row=mysqli_fetch_all($select_cart);
                       <h4 class="media-heading"><a href="#"><?php print_r ($row[$l][3]);?></a></h4>
                       <span>Status: </span><span class="text-success">In Stock</span> </div>
                   </div></td>
-                <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="email">
+                <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="1" type="email">
                 </td>
                 <td class="col-sm-1 col-md-1 text-center"><p class="price_table"><?php print_r ($row[$l][4]);?></p></td>
                 <td class="col-sm-1 col-md-1 text-center"><p class="price_table"><?php print_r ($row[$l][4]);?></p></td>
@@ -141,8 +141,6 @@ $row=mysqli_fetch_all($select_cart);
                 $price = $row[$l][4];
                 $total = $total + $price;
                 $grand_total = $total + 40;
-                
-
                 $l++;
                 
                 }              

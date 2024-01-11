@@ -23,6 +23,8 @@ if(isset($message)){
          <a href="admin_orders.php">Orders</a>
          <a href="admin_service.php">Service</a>
          <a href="admin_users.php">Users</a>
+         <a href="admin_month.php">Monthly Report</a>
+
          
       </nav>
 

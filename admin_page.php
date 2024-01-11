@@ -41,7 +41,7 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-   <h1 class="title">Dashboard</h1>
+   <h1 class="title">Dashboard</h1> 
 
    <div class="box-container">
 

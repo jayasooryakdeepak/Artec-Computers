@@ -29,9 +29,10 @@ $pincode = $_REQUEST['pz'];
 $phone = $_REQUEST['ph'];
 $email = $_REQUEST['em'];
 $total = $_REQUEST['total'];
+$date = date('m');
 //Inserting into Billing_Details Table
-$sql = "INSERT INTO Billing_Details (id, First_Name, Last_Name, Country, Address, City, Pincode, Phone, Email, Amount)
-VALUES ('$user_id','$fname', '$lname', '$country','$address','$city', '$pincode','$phone' ,'$email', '$total')";
+$sql = "INSERT INTO Billing_Details (id, First_Name, Last_Name, Country, Address, City, Pincode, Phone, Email, Amount, Month)
+VALUES ('$user_id','$fname', '$lname', '$country','$address','$city', '$pincode','$phone' ,'$email', '$total', '$date')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record Added";
